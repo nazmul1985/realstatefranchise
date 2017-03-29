@@ -1,0 +1,91 @@
+﻿<link rel="import" href="/sys/polymer/polymer.html">
+<link href="/sys/paper-dialog/paper-dialog.html" rel="import" />
+<!--<link rel="stylesheet" href="/RealStateFranchise/style.css"/>-->
+
+<template>
+    <template is="dom-bind">
+
+        <a href="/RealStateFranchise">Home</a>
+
+        <H1>Francise Offices of {{model.CompanyName}}</H1>
+        <button class="btn btn-sm btn-default" value="{{model.CreateOffice$::click}}" onmousedown="++this.value">Create Franchise Office</button>
+        <table class="table table-striped table-hover table-sortable-list">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Number of Homes Sold <button value="{{model.SortHomeSaleTrigger$::click}}" onmousedown="++this.value">Sort</button></th>
+                    <th>Total Commission <button value="{{model.SortTotalCommission$::click}}" onmousedown="++this.value">Sort</button></th>
+                    <th>Average Commision <button value="{{model.SortAverageCommission$::click}}" onmousedown="++this.value">Sort</button></th>
+                    <th>Trend <button value="{{model.SortTrend$::click}}" onmousedown="++this.value">Sort</button></th>
+                </tr>
+            </thead>
+            <tbody>
+                <template is="dom-repeat" items="{{model.Offices}}">
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="{{item.Link}}">{{item.Name}}</a>
+                            </p>
+                        </td>
+                        <td>{{item.HomesSold}}</td>
+                        <td>{{item.TotalCommision}}</td>
+                        <td>{{item.AverageCommision}}</td>
+                        <td>{{item.Trend}}</td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+
+        <paper-dialog id="actions" opened="[[model.OpenModal]]" modal="true">
+            <div>
+                <h2>Create Franchise Office</h2>
+                <table style="width: 400px">
+                    <tr>
+                        <td><label>Name:</label></td>
+                        <td style="width: 8px"></td>
+                        <td><input type="text" value="{{model.NewOffice.Name$::input}}" /></td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Street:</label></td>
+                        <td style="width: 8px"></td>
+                        <td><input type="text" value="{{model.NewOffice.Street$::input}}" /></td>
+                    </tr>
+                    <tr>
+                        <td> <label>Number:</label></td>
+                        <td style="width: 8px"></td>
+                        <td><input type="text" value="{{model.NewOffice.Contact$::input}}" /></td>
+
+                    </tr>
+                    <tr>
+                        <td><label>Zip Code:</label></td>
+                        <td style="width: 8px"></td>
+                        <td><input type="number" value="{{model.NewOffice.ZipCode$::input}}" /></td>
+                    </tr>
+                    <tr>
+                        <td><label>City:</label></td>
+                        <td style="width: 8px"></td>
+                        <td><input type="text" value="{{model.NewOffice.City$::input}}" /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Country:</label></td>
+                        <td style="width: 8px"></td>
+                        <td><input type="text" value="{{model.NewOffice.Country$::input}}" /></td>
+                    </tr>
+                    <tr>
+                        <td><label style="vertical-align: top">Address:</label></td>
+                        <td style="width: 8px"></td>
+                        <td>
+                            <label>{{model.NewOffice.Address}}</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="buttons">
+                <button class="btn btn-sm btn-default" dialog-dismiss value="{{model.CancelTrigger$::click}}" onmousedown="++this.value;">Cancel</button>
+                <span>&nbsp;</span>
+                <button class="btn btn-sm btn-primary" dialog-confirm autofocus value="{{model.CreateTrigger$::click}}" onmousedown="++this.value;">Save</button>
+            </div>
+        </paper-dialog>
+    </template>
+</template>

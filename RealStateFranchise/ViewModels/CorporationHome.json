@@ -1,0 +1,33 @@
+{
+  "Html": "/RealStateFranchise/CorporationHome.html",
+  "CompanyName": "",
+  "CreateOffice$": 0,
+  "SortHomeSaleTrigger$": 0,
+  "SortTotalCommission$": 0,
+  "SortAverageCommission$": 0,
+  "SortTrend$": 0,
+  "OpenModal": false,
+  "CancelTrigger$": 0,
+  "CreateTrigger$": 0,
+  "Offices": [
+    {
+      "Key": "",
+      "Name": "",
+      "HomesSold": 0,
+      "TotalCommision": 0.0,
+      "AverageCommision": 0.0,
+      "Link": "",
+      "Trend": 0.0
+    }
+  ],
+  "NewOffice": {
+    "Name$": "",
+    "Street$": "",
+    "Contact$": "",
+    "ZipCode$": 0,
+    "City$": "",
+    "Country$": "",
+    "Address": "",
+    "$Address": { "Bind": "OfficeAddress" }
+  }
+}

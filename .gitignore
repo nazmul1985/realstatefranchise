@@ -1,0 +1,8 @@
+packages/
+RealStateFranchise/obj/
+RSF.Infrastructure/obj/
+RSF.Repository/obj/
+RSF.Infrastructure/Contracts/IHandler.cs
+RSF.Infrastructure/
+RealStateFranchise/bin/
+.vs/

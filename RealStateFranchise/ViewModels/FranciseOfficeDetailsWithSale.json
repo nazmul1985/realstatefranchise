@@ -1,0 +1,39 @@
+{
+  "Html": "/RealStateFranchise/FranciseOfficeDetailsWithSale.html",
+  "BackUrl": "",
+  "UpdateOfficeTrigger$": 0,
+  "AddHomeForSale$": 0,
+  "CancelTrigger$": 0,
+  "AddHomeTrigger$": 0,
+  "OpenModal": false,
+  "Office": {
+    "Name$": "",
+    "Street$": "",
+    "Contact$": "",
+    "ZipCode$": 0,
+    "City$": "",
+    "Country$": "",
+    "Address": "",
+    "$Address": { "Bind": "AddressReact" }
+  },
+  "HomeSale": {
+    "Street$": "",
+    "Number$": "",
+    "ZipCode$": 0,
+    "City$": "",
+    "Country$": "",
+    "Address": "",
+    "$Address": { "Bind": "HomeAddress" },
+    "SaleDate$": "",
+    "Price$": 0.0,
+    "Commission$": 0.0
+  },
+  "Transactions": [
+    {
+      "SaleDate": "",
+      "Price": 0.0,
+      "Commission": 0.0,
+      "Address": ""
+    }
+  ]
+}
